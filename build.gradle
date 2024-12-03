@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id "application"
+}
+
+group = 'PaqAttack'
+version = '1.0-SNAPSHOT'
+
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+mainClassName = 'main/Simulator'
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
